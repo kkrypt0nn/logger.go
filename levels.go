@@ -23,12 +23,12 @@ const (
 var (
 	// LevelColors convert a logging level to its color.
 	LevelColors = map[Level]string{
-		DEBUG: terminal.WHITE + terminal.BACK_BLACK,
-		INFO:  terminal.WHITE + terminal.BACK_BLUE,
-		WARN:  terminal.WHITE + terminal.BACK_YELLOW,
-		ERROR: terminal.WHITE + terminal.BACK_RED,
-		FATAL: terminal.WHITE + terminal.BOLD + terminal.BACK_RED,
-		TRACE: terminal.BLACK + terminal.BACK_DARKGRAY,
+		DEBUG: terminal.WHITE + terminal.BG_BLACK,
+		INFO:  terminal.WHITE + terminal.BG_BLUE,
+		WARN:  terminal.WHITE + terminal.BG_YELLOW,
+		ERROR: terminal.WHITE + terminal.BG_RED,
+		FATAL: terminal.WHITE + terminal.BOLD + terminal.BG_RED,
+		TRACE: terminal.BLACK + terminal.BG_GRAY,
 	}
 	// LevelNames convert a logging level to its name.
 	LevelNames = map[Level]string{
