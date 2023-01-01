@@ -1,6 +1,15 @@
 # logger.go
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/kkrypt0nn/logger.go.svg)](https://pkg.go.dev/github.com/kkrypt0nn/logger.go) ![Repository License](https://img.shields.io/github/license/kkrypt0nn/logger.go?style=flat-square) ![Code Size](https://img.shields.io/github/languages/code-size/kkrypt0nn/logger.go?style=flat-square) ![Last Commit](https://img.shields.io/github/last-commit/kkrypt0nn/logger.go?style=flat-square)
+
 A lightweight and easy to use Go logging library that includes logging functionalities with different levels and custom formatting.
+
+## Installation
+If you want to use this library for one of your projects, you can install it like any other Go library
+
+```shell
+go get github.com/kkrypt0nn/logger.go
+```
 
 ## Customizing
 
@@ -24,5 +33,7 @@ You can choose whether you want to style your messages or not with the `SetStyli
 > **Note**: The styling will **not** apply to the message if it is not supported by the terminal.
 
 ### Log File
-
 Logs can also be written inside a log file with styling removed. See the [example here](examples/file/main.go).
+
+## License
+This library was made with 💜 by Krypton and is under the [GPL v3](LICENSE.md) license.
