@@ -11,12 +11,12 @@ var (
 	CurrentDateFormat     = "Jan 02, 2006"
 	CurrentDatetimeFormat = "Jan 02, 2006 15:04:05"
 	CurrentTimeFormat     = "15:04:05"
+
+	ForceStyling = false
 )
 
 // Logger is represents a logger structure.
 type Logger struct {
-	// ForceStyling will force the styling to **always** render. Use it only if you know what you are doing.
-	ForceStyling bool
 	// Styling describes whether the logger should style the logged message.
 	Styling bool
 	// Prefix is the prefix before the logged message.
@@ -36,7 +36,7 @@ func NewLogger() *Logger {
 
 // SetForceStyling sets to whether it should force the styling render.
 func (l *Logger) SetForceStyling(forceStyling bool) {
-	l.ForceStyling = forceStyling
+	ForceStyling = forceStyling
 }
 
 // SetLogFile will set the log file to write logs into.
@@ -75,7 +75,7 @@ func (l *Logger) doLog(level Level, message string) {
 	defer l.SetLoggingLevel(NONE)
 	message = l.Prefix + message + terminal.RESET
 	message = AddVariables(message)
-	if (l.Styling && terminal.AreColorsSupported()) || (l.ForceStyling) {
+	if (l.Styling && terminal.AreColorsSupported()) || (ForceStyling) {
 		message = AddStyling(message)
 	}
 	fmt.Println(message)
@@ -131,7 +131,7 @@ func (l *Logger) SetLoggingLevel(level Level) {
 // Print simply prints the message, without logging level.
 func (l *Logger) Print(message string) {
 	message = AddVariables(message)
-	if (l.Styling && terminal.AreColorsSupported()) || (l.ForceStyling) {
+	if (l.Styling && terminal.AreColorsSupported()) || (ForceStyling) {
 		message = AddStyling(message)
 	}
 	fmt.Print(message + terminal.RESET)
@@ -140,7 +140,7 @@ func (l *Logger) Print(message string) {
 // Println simply prints the message with a new line, without logging level.
 func (l *Logger) Println(message string) {
 	message = AddVariables(message)
-	if (l.Styling && terminal.AreColorsSupported()) || (l.ForceStyling) {
+	if (l.Styling && terminal.AreColorsSupported()) || (ForceStyling) {
 		message = AddStyling(message)
 	}
 	fmt.Println(message + terminal.RESET)

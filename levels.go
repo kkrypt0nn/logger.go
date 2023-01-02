@@ -54,10 +54,10 @@ var (
 
 // GetLevelColor returns the color of the level.
 func GetLevelColor(id Level) string {
-	if !terminal.AreColorsSupported() {
-		return ""
+	if terminal.AreColorsSupported() || ForceStyling {
+		return LevelColors[id]
 	}
-	return LevelColors[id]
+	return ""
 }
 
 // GetLevelName returns the name of the level.
