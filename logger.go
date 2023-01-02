@@ -7,10 +7,10 @@ import (
 )
 
 var (
-	CurrentLoggingLevel   Level = 0
-	CurrentDateFormat           = "Jan 02, 2006"
-	CurrentDatetimeFormat       = "Jan 02, 2006 15:04:05"
-	CurrentTimeFormat           = "15:04:05"
+	CurrentLoggingLevel   = NONE
+	CurrentDateFormat     = "Jan 02, 2006"
+	CurrentDatetimeFormat = "Jan 02, 2006 15:04:05"
+	CurrentTimeFormat     = "15:04:05"
 )
 
 // Logger is represents a logger structure.
@@ -32,6 +32,7 @@ func NewLogger() *Logger {
 	}
 }
 
+// SetLogFile will set the log file to write logs into.
 func (l *Logger) SetLogFile(file *os.File) {
 	l.LogFile = file
 }
@@ -64,7 +65,7 @@ func (l *Logger) SetPrefix(prefix string) {
 func (l *Logger) doLog(level Level, message string) {
 	CurrentLoggingLevel = level
 	// So that Print and Println do not keep the previous logging level.
-	defer l.SetLoggingLevel(1337)
+	defer l.SetLoggingLevel(NONE)
 	message = l.Prefix + message + terminal.RESET
 	message = AddVariables(message)
 	if l.Styling && terminal.AreColorsSupported() {

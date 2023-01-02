@@ -103,15 +103,12 @@ var (
 		},
 		// Date & Time Now
 		"${now:date}": func() string {
-			// Format customization coming soon
 			return time.Now().Format(CurrentDateFormat)
 		},
 		"${now:time}": func() string {
-			// Format customization coming soon
 			return time.Now().Format(CurrentTimeFormat)
 		},
 		"${now:datetime}": func() string {
-			// Format customization coming soon
 			return time.Now().Format(CurrentDatetimeFormat)
 		},
 		// System

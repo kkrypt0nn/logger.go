@@ -19,7 +19,7 @@ The prefix, what comes before the message, can be changed with the `SetPrefix` m
 > The default prefix is `${datetime} ${level:color}${level:name}${reset}: `
 
 ### Placeholders
-There are formatting placeholders that will be replaced in both the message and the prefix that can be seen [here](PLACEHOLDERS.md).
+There are formatting placeholders that will be replaced in both the message and the prefix that can be seen [here](PLACEHOLDERS.md). All the placeholders in effect can be seen in the [`placeholders example`](examples/placeholders/main.go).
 
 [For example](examples), logging the following message
 ```

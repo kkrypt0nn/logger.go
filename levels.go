@@ -18,6 +18,8 @@ const (
 	FATAL
 	// TRACE level designates finer-grained informational events than the DEBUG.
 	TRACE
+	// NONE will reset the logging level to nothing.
+	NONE Level = 1337
 )
 
 var (
