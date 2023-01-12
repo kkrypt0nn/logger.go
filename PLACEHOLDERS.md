@@ -10,6 +10,7 @@ This is the list of placeholders and aliases that will get replaced in your logg
 |---------------------------|------------------------------------------------------------|
 | `${caller:function}`      | The name of the function and file where it has been logged |
 | `${caller:shortfunction}` | The name of the function where it has been logged          |
+| `${caller:file}`          | The name of the file where it has been logged              |
 
 ### Logging Level
 
@@ -95,10 +96,11 @@ This is the list of placeholders and aliases that will get replaced in your logg
 ## Aliases
 
 ### Caller
-| Name                  | Alias of                  |
-|-----------------------|---------------------------|
-| `${function}`         | `${caller:function}`      |
-| `${shortfunction}`    | `${caller:shortfunction}` |
+| Name               | Alias of                  |
+|--------------------|---------------------------|
+| `${function}`      | `${caller:function}`      |
+| `${shortfunction}` | `${caller:shortfunction}` |
+| `${file}`          | `${caller:file}`          |
 
 ### Date & Time Now
 

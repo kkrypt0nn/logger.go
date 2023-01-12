@@ -12,11 +12,11 @@ func main() {
 	logger.Println("${bg:black}Black${reset}\t${bg:red}Red${reset}\t\t${bg:green}Green${reset}\t\t${bg:yellow}Yellow${reset}\t\t${bg:blue}Blue${reset}\t\t${bg:purple}Purple${reset}\t\t${bg:cyan}Cyan${reset}\t\t${bg:white}White")
 	logger.Println("${bg:gray}Gray${reset}\t${bg:brightred}Bright red${reset}\t${bg:brightgreen}Bright green${reset}\t${bg:brightyellow}Bright yellow\t${bg:brightblue}Bright blue${reset}\t${bg:brightpurple}Bright purple${reset}\t${bg:brightcyan}Bright cyan${reset}\t${bg:brightwhite}Bright white")
 	logger.Println("${bold}Special Effects:")
-	logger.Println("${effect:bold}Bold${reset}\t${effect:dim}Dim${reset}\t\t${effect:underline}Underline${reset}\t${effect:blink}blink${reset}\t\t${effect:inverse}Inverse${reset}\t\t${effect:strikethrough}Strikethrough${reset}")
+	logger.Println("${effect:bold}Bold${reset}\t${effect:dim}Dim${reset}\t\t${effect:underline}Underline${reset}\t${effect:blink}Blink${reset}\t\t${effect:inverse}Inverse${reset}\t\t${effect:strikethrough}Strikethrough${reset}")
 
 	logger.Println("\n${bold}${underline}Variables:")
 	logger.Println("${bold}Caller:")
-	logger.Println("Function: ${caller:function}\tShort function: ${caller:shortfunction}")
+	logger.Println("Function: ${caller:function}\tShort function: ${caller:shortfunction}\t\tFile: ${caller:file}")
 	logger.Println("${bold}Logging Level:")
 	logger.SetLoggingLevel(logging.FATAL)
 	logger.Println("Level Color: ${level:color}Color${reset}\tLevel Name: ${level:name}\t\tLevel Short Name: ${level:shortname}")

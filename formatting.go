@@ -28,6 +28,7 @@ var (
 		"${userid}":           "${sys:userid}",
 		"${function}":         "${caller:function}",
 		"${shortfunction}":    "${caller:shortfunction}",
+		"${file}":             "${caller:file}",
 
 		// Styles
 		"${black}":         "${fg:black}",
@@ -87,6 +88,14 @@ var (
 			details := runtime.FuncForPC(pc)
 			split := strings.Split(details.Name(), ".")
 			if ok && details != nil && len(split) >= 2 {
+				return split[len(split)-1]
+			}
+			return ""
+		},
+		"${caller:file}": func() string {
+			_, file, _, ok := runtime.Caller(3)
+			split := strings.Split(file, "/")
+			if ok && len(split) >= 1 {
 				return split[len(split)-1]
 			}
 			return ""
