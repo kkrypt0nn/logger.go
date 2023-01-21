@@ -5,6 +5,6 @@ import (
 )
 
 func main() {
-	logger := logging.NewLogger()
+	logger := logger.NewLogger()
 	logger.Debug("Debug message example")
 }

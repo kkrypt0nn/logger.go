@@ -14,7 +14,7 @@ func main() {
 		}
 		file = createdFile
 	}
-	logger := logging.NewLogger()
+	logger := logger.NewLogger()
 	logger.SetLogFile(file)
 	// The styling will get removed when writing into the file.
 	logger.Debug("${fg:red}${effect:blink}${effect:bold}${sys:username} says hello!")

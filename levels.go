@@ -1,4 +1,4 @@
-package logging
+package logger
 
 import "github.com/kkrypt0nn/logger.go/terminal"
 

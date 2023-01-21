@@ -3,7 +3,7 @@ package main
 import "github.com/kkrypt0nn/logger.go"
 
 func main() {
-	logger := logging.NewLogger()
+	logger := logger.NewLogger()
 	logger.Println("${bold}${underline}Styling:")
 	logger.Println("${bold}Foreground colors:")
 	logger.Println("${fg:black}Black${reset}\t${fg:red}Red${reset}\t\t${fg:green}Green${reset}\t\t${fg:yellow}Yellow${reset}\t\t${fg:blue}Blue${reset}\t\t${fg:purple}Purple${reset}\t\t${fg:cyan}Cyan${reset}\t\t${fg:white}White")
